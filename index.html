@@ -6,12 +6,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Mystery Box</title>
+    <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
 </head>
 
 <body>
     <h1>The Mystery Box</h1>
     <p>Bienvenido a nuestro sitio web.</p>
 
+    <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+
+
+
+    <!--Salesforce Candidatos-->
+    <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+
+        <input type=hidden name="oid" value="00D5e0000019aru">
+        <input type=hidden name="retURL" value="https://alfacoy.github.io/The-Mystery-Box/">
+
+        <!--  ----------------------------------------------------------------------  -->
+        <!--  NOTA: Estos campos son elementos de depuración opcionales. Elimine      -->
+        <!--  los comentarios de estas líneas si desea realizar una prueba en el      -->
+        <!--  modo de depuración.                                                     -->
+        <!--  <input type="hidden" name="debug" value=1>                              -->
+        <!--  <input type="hidden" name="debugEmail"                                  -->
+        <!--  value="sistemas.ninanbu@gmail.com">                                     -->
+        <!--  ----------------------------------------------------------------------  -->
+
+        <label for="first_name">Nombre</label><input id="first_name" maxlength="40" name="first_name" size="20" type="text" /><br>
+
+        <label for="last_name">Apellidos</label><input id="last_name" maxlength="80" name="last_name" size="20" type="text" /><br>
+
+        <label for="email">Correo electrónico</label><input id="email" maxlength="80" name="email" size="20" type="text" /><br>
+
+        <label for="phone">Teléfono</label><input id="phone" maxlength="40" name="phone" size="20" type="text" /><br>
+
+        <label for="doNotCall">No llamar</label><input id="doNotCall" name="doNotCall" type="checkbox" value="1" /><br>
+
+        <label for="emailOptOut">No recibir correos electrónicos</label>
+
+        <label for="mobile">Móvil</label><input id="mobile" maxlength="40" name="mobile" size="20" type="text" /><br>
+
+        <input id="emailOptOut" name="emailOptOut" type="checkbox" value="1" />
+        <br> Productos de interes:
+        <select id="00N5e00000DMlpD" multiple="multiple" name="00N5e00000DMlpD" title="Productos de interes">
+            <option value="GoodMorningBoss">GoodMorningBoss</option>
+        </select>
+        <br>
+
+        <input type="submit" name="submit">
+
+    </form>
 
 </body>
 
