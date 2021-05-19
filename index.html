@@ -13,10 +13,6 @@
     <h1>The Mystery Box</h1>
     <p>Bienvenido a nuestro sitio web.</p>
 
-    <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
-
-
-
     <!--Salesforce Candidatos-->
     <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
 
@@ -31,31 +27,35 @@
         <!--  <input type="hidden" name="debugEmail"                                  -->
         <!--  value="sistemas.ninanbu@gmail.com">                                     -->
         <!--  ----------------------------------------------------------------------  -->
+        <div>
+            <h4>Datos personales</h4>
+            <label for="first_name">Nombre</label><input id="first_name" maxlength="40" name="first_name" size="20" type="text" /><br>
+            <label for="last_name">Apellidos</label><input id="last_name" maxlength="80" name="last_name" size="20" type="text" /><br>
+        </div>
 
-        <label for="first_name">Nombre</label><input id="first_name" maxlength="40" name="first_name" size="20" type="text" /><br>
+        <div>
+            <h4>Datos de contacto</h4>
+            <label for="email">Correo electrónico</label><input id="email" maxlength="80" name="email" size="20" type="text" /><br>
+            <label for="phone">Teléfono</label><input id="phone" maxlength="40" name="phone" size="20" type="text" /><br>
+            <label for="mobile">Móvil</label><input id="mobile" maxlength="40" name="mobile" size="20" type="text" /><br>
+        </div>
 
-        <label for="last_name">Apellidos</label><input id="last_name" maxlength="80" name="last_name" size="20" type="text" /><br>
+        <div>
+            <h4>Preferencia de contacto</h4>
+            <label for="doNotCall">No llamar</label><input id="doNotCall" name="doNotCall" type="checkbox" value="1" /><br>
+            <label for="emailOptOut">No recibir correos electrónicos</label><input id="emailOptOut" name="emailOptOut" type="checkbox" value="1" />
+        </div>
 
-        <label for="email">Correo electrónico</label><input id="email" maxlength="80" name="email" size="20" type="text" /><br>
+        <div>
+            <h4>Productos de interes</h4>
+            <select id="00N5e00000DMlpD" multiple="multiple" name="00N5e00000DMlpD" title="Productos de interes">
+                <option value="GoodMorningBoss">GoodMorningBoss</option>
+            </select>
+        </div>
 
-        <label for="phone">Teléfono</label><input id="phone" maxlength="40" name="phone" size="20" type="text" /><br>
 
-        <label for="doNotCall">No llamar</label><input id="doNotCall" name="doNotCall" type="checkbox" value="1" /><br>
+        <select style="display: none;" id="lead_source" name="lead_source"><option value="Formulario Web" selected>Formulario Web</option></select>
 
-        <label for="emailOptOut">No recibir correos electrónicos</label>
-
-        <label for="mobile">Móvil</label><input id="mobile" maxlength="40" name="mobile" size="20" type="text" /><br>
-
-        <input id="emailOptOut" name="emailOptOut" type="checkbox" value="1" />
-        <br> Productos de interes:
-        <select id="00N5e00000DMlpD" multiple="multiple" name="00N5e00000DMlpD" title="Productos de interes">
-            <option value="GoodMorningBoss">GoodMorningBoss</option>
-        </select>
-        <br>
-        
-        <select type="hidden"  id="lead_source" name="lead_source"><option value="Formulario Web" selected>Formulario Web</option></select>
-
-        
         <input type="submit" name="submit">
 
     </form>
