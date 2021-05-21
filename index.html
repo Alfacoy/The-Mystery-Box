@@ -5,61 +5,93 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+
     <title>The Mystery Box</title>
-    <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+    <!--Bootstrap 5-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body class="container">
     <h1>The Mystery Box</h1>
     <p>Bienvenido a nuestro sitio web.</p>
 
-    <!--Salesforce Candidatos-->
-    <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
-
-        <input type=hidden name="oid" value="00D5e0000019aru">
-        <input type=hidden name="retURL" value="https://alfacoy.github.io/The-Mystery-Box/">
-
-        <!--  ----------------------------------------------------------------------  -->
-        <!--  NOTA: Estos campos son elementos de depuración opcionales. Elimine      -->
-        <!--  los comentarios de estas líneas si desea realizar una prueba en el      -->
-        <!--  modo de depuración.                                                     -->
-        <!--  <input type="hidden" name="debug" value=1>                              -->
-        <!--  <input type="hidden" name="debugEmail"                                  -->
-        <!--  value="sistemas.ninanbu@gmail.com">                                     -->
-        <!--  ----------------------------------------------------------------------  -->
-        <div>
-            <h4>Datos personales</h4>
-            <label for="first_name">Nombre</label><input id="first_name" maxlength="40" name="first_name" size="20" type="text" /><br>
-            <label for="last_name">Apellidos</label><input id="last_name" maxlength="80" name="last_name" size="20" type="text" /><br>
-        </div>
-
-        <div>
-            <h4>Datos de contacto</h4>
-            <label for="email">Correo electrónico</label><input id="email" maxlength="80" name="email" size="20" type="text" /><br>
-            <label for="phone">Teléfono</label><input id="phone" maxlength="40" name="phone" size="20" type="text" /><br>
-            <label for="mobile">Móvil</label><input id="mobile" maxlength="40" name="mobile" size="20" type="text" /><br>
-        </div>
-
-        <div>
-            <h4>Preferencia de contacto</h4>
-            <label for="doNotCall">No llamar</label><input id="doNotCall" name="doNotCall" type="checkbox" value="1" /><br>
-            <label for="emailOptOut">No recibir correos electrónicos</label><input id="emailOptOut" name="emailOptOut" type="checkbox" value="1" />
-        </div>
-
-        <div>
-            <h4>Productos de interes</h4>
-            <select id="00N5e00000DMlpD" multiple="multiple" name="00N5e00000DMlpD" title="Productos de interes">
-                <option value="GoodMorningBoss">GoodMorningBoss</option>
-            </select>
-        </div>
 
 
-        <select style="display: none;" id="lead_source" name="lead_source"><option value="Formulario Web" selected>Formulario Web</option></select>
 
-        <input type="submit" name="submit">
+    <!--Formulario Nuevos Candidatos-->
+    <div class="row">
+        <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" class="col-6">
+            <input type=hidden name="oid" value="00D5e0000019aru">
+            <input type=hidden name="retURL" value="https://alfacoy.github.io/The-Mystery-Box/">
 
-    </form>
+            <!--  ----------------------------------------------------------------------  -->
+            <!--  NOTA: Estos campos son elementos de depuración opcionales. Elimine      -->
+            <!--  los comentarios de estas líneas si desea realizar una prueba en el      -->
+            <!--  modo de depuración.                                                     -->
+            <!--  <input type="hidden" name="debug" value=1>                              -->
+            <!--  <input type="hidden" name="debugEmail"                                  -->
+            <!--  value="sistemas.ninanbu@gmail.com">                                     -->
+            <!--  ----------------------------------------------------------------------  -->
 
+            <div class="row">
+                <h4>Datos personales</h4>
+                <div class="col">
+                    <label for="first_name" class="form-label">Nombre</label>
+                    <input id="first_name" maxlength="40" name="first_name" size="20" type="text" class="form-control" />
+                </div>
+                <div class="col">
+                    <label for="last_name" class="form-label">Apellidos</label>
+                    <input id="last_name" maxlength="80" name="last_name" size="20" type="text" class="form-control" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <label for="email" class="form-label">Correo electrónico</label>
+                    <input id="email" maxlength="80" name="email" size="20" type="text" class="form-control" />
+                </div>
+                <div class="col">
+                    <label for="phone" class="form-label">Teléfono</label>
+                    <input id="phone" maxlength="40" name="phone" size="20" type="text" class="form-control" />
+                </div>
+                <div class="col">
+                    <label for="mobile" class="form-label">Móvil</label>
+                    <input id="mobile" maxlength="40" name="mobile" size="20" type="text" class="form-control" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <h4>Productos de interes</h4>
+                    <select id="00N5e00000DMlpD" multiple="multiple" name="00N5e00000DMlpD" title="Productos de interes" class="form-select">
+                        <option value="GoodMorningBoss">GoodMorningBoss</option>
+                    </select>
+                </div>
+
+                <div class="col">
+                    <h4>Preferencia de contacto</h4>
+                    <div class="form-check">
+                        <label for="doNotCall" class="form-check-label">No llamar</label>
+                        <input id="doNotCall" name="doNotCall" type="checkbox" value="1" class="form-check-input" />
+                    </div>
+                    <div class="form-check">
+                        <label for="emailOptOut" class="form-label" class="form-check-label">No recibir correos electrónicos</label>
+                        <input id="emailOptOut" name="emailOptOut" type="checkbox" value="1" class="form-check-input" />
+                    </div>
+                </div>
+            </div>
+
+            <!--DATA HIDDEN-->
+            <select style="display: none;" id="lead_source" name="lead_source"><option value="Formulario Web" selected>Formulario Web</option></select>
+
+            <!--SUBMIT-->
+            <div class="d-grid">
+                <input type="submit" name="submit" class="btn btn-primary mt-4">
+            </div>
+        </form>
+    </div>
 </body>
 
 </html>
