@@ -12,26 +12,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 
-
-    <style type='text/css'>
-        .embeddedServiceHelpButton .helpButton .uiButton {
-            background-color: #005290 !important;
-            font-family: "Arial", sans-serif !important;
-        }
-        
-        .embeddedServiceHelpButton .helpButton .uiButton:focus {
-            outline: 1px solid #005290;
-        }
-    </style>
-
 </head>
 
 <body class="container">
     <h1>The Mystery Box</h1>
     <p>Bienvenido a nuestro sitio web.</p>
-
-
-    <button class="embeddedServiceHelpButton helpButton uiButton">Chat</button>
 
 
 
@@ -86,15 +71,10 @@
                 </div>
 
                 <div class="col">
-                    <h4>Preferencia de contacto</h4>
-                    <div class="form-check">
-                        <label for="doNotCall" class="form-check-label">No llamar</label>
-                        <input id="doNotCall" name="doNotCall" type="checkbox" value="1" class="form-check-input" />
-                    </div>
-                    <div class="form-check">
-                        <label for="emailOptOut" class="form-label" class="form-check-label">No recibir correos electrónicos</label>
-                        <input id="emailOptOut" name="emailOptOut" type="checkbox" value="1" class="form-check-input" />
-                    </div>
+                    <label for="city" class="form-label">Ciudad</label>
+                    <input id="city" maxlength="40" name="city" size="20" type="text" class="form-control" />
+                    <label for="state" class="form-label">Estado/Provincia</label>
+                    <input id="state" maxlength="20" name="state" size="20" type="text" class="form-control" />
                 </div>
             </div>
 
@@ -108,45 +88,6 @@
         </form>
     </div>
 
-
-
-    <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
-    <script type='text/javascript'>
-        var initESW = function(gslbBaseURL) {
-            embedded_svc.settings.displayHelpButton = true; //O falso
-            embedded_svc.settings.language = 'en'; //Por ejemplo, introduzca 'en' o 'en-US'
-
-            //embedded_svc.settings.defaultMinimizedText = '...'; //(Toma como valor predeterminado Sesión de chat con un experto)
-            //embedded_svc.settings.disabledMinimizedText = '...'; //(Toma como valor predeterminado Agente sin conexión)
-
-            embedded_svc.settings.loadingText = ''; //(Toma como valor predeterminado Cargando)
-            embedded_svc.settings.storageDomain = 'https://alfacoy.github.io/The-Mystery-Box/'; //(Establece el dominio para su desarrollo de modo que los visitantes puedan navegar por subdominios durante una sesión de chat)
-
-            embedded_svc.settings.enabledFeatures = [];
-            embedded_svc.settings.entryFeature = '';
-
-            embedded_svc.init(
-                'https://ninanbu4-dev-ed.my.salesforce.com',
-                'https://themysterybox-developer-edition.na162.force.com/visualforce',
-                gslbBaseURL,
-                '00D5e0000019aru',
-                'Chat_Agents', {
-
-                }
-            );
-        };
-
-        if (!window.embedded_svc) {
-            var s = document.createElement('script');
-            s.setAttribute('src', 'https://ninanbu4-dev-ed.my.salesforce.com/embeddedservice/5.0/esw.min.js');
-            s.onload = function() {
-                initESW(null);
-            };
-            document.body.appendChild(s);
-        } else {
-            initESW('https://service.force.com');
-        }
-    </script>
 </body>
 
 </html>
